@@ -12,7 +12,7 @@ public class StackTest {
     }
 
     @Test
-    public void pushStack_add_Element_at_Tail() {
+    public void pushStack_add_Element_at_Front() {
         stack.push(70);
         stack.push(30);
         stack.push(56);
