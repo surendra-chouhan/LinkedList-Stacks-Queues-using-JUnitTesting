@@ -68,4 +68,14 @@ public class LinkedListTest {
         list.popLastElement();
         list.show();
     }
+
+    @Test
+    public void search_Given_Node() {
+        list.addNode(56);
+        list.addNode(30);
+        list.addNode(70);
+        list.show();
+
+        list.searchNode(30);
+    }
 }

@@ -108,6 +108,33 @@ public class LinkedList<T extends Comparable<T>> {
         }
     }
 
+    public void searchNode(T data) {
+        Node<T> current = head;
+        int i = 1;
+        boolean flag = false;
+
+        if (head == null) {
+            System.out.println("List is Empty");
+        }
+        else {
+            while(current != null) {
+                if (current.data == data) {
+                    flag = true;
+                    break;
+                }
+                i++;
+                current = current.next;
+            }
+        }
+
+        if (flag) {
+            System.out.println(data + " is present in the list at position : " + i);
+        }
+        else {
+            System.out.println(data + " is not present in the list");
+        }
+    }
+
     public void show() {
         Node<T> current = head;
         int size = 0;
