@@ -108,16 +108,17 @@ public class LinkedList<T extends Comparable<T>> {
         }
     }
 
-    public void searchNode(T data) {
+    public T searchNode(T data) {
         Node<T> current = head;
         int i = 1;
         boolean flag = false;
 
-        if (head == null) {
+        if (current == null) {
             System.out.println("List is Empty");
+            return null;
         }
         else {
-            while(current != null) {
+            while (current != null) {
                 if (current.data == data) {
                     flag = true;
                     break;
@@ -125,14 +126,26 @@ public class LinkedList<T extends Comparable<T>> {
                 i++;
                 current = current.next;
             }
-        }
 
-        if (flag) {
-            System.out.println(data + " is present in the list at position : " + i);
+            if (flag) {
+                System.out.println(data + " is present in the list at position : " + i);
+                return (T)current.data;
+            } else {
+                System.out.println(data + " is not present in the list");
+                return null;
+            }
         }
-        else {
-            System.out.println(data + " is not present in the list");
+    }
+
+    public T insertAfterGivenNode(Node<T> previous, T data) {
+        if (previous == null) {
+            System.out.println("Previous Node cannot be null");
+            return null;
         }
+        Node<T> newNode = new Node<T>(data);
+        newNode.next = previous.next;
+        previous.next = newNode;
+        return (T)newNode.data;
     }
 
     public void show() {
