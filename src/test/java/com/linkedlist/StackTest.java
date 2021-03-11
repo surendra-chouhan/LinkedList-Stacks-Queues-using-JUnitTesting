@@ -13,8 +13,22 @@ public class StackTest {
 
     @Test
     public void pushStack_add_Element_at_Tail() {
-        stack.push(56);
-        stack.push(30);
         stack.push(70);
+        stack.push(30);
+        stack.push(56);
+    }
+
+    @Test
+    public void popStack_delete_Element_at_Front() {
+        int i = 0;
+        stack.push(70);
+        stack.push(30);
+        stack.push(56);
+
+        System.out.println("After Deleting : ");
+        while ( i < 3) {
+            stack.pop();
+            i++;
+        }
     }
 }
