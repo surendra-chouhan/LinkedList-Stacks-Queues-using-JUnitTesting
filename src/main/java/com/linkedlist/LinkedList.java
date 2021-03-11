@@ -53,6 +53,26 @@ public class LinkedList<T extends Comparable<T>> {
         }
     }
 
+    public Node<T> insertAtMiddle(T data, int position) {
+        Node<T> newNode = new Node<T>(data);
+        newNode.data = data;
+        Node current = head;
+        Node previous = null;
+        int i = 0;
+        while(i < position) {
+            previous = current;
+            current = current.next;
+            i++;
+        }
+        newNode.next = current;
+
+        if(previous != null) {
+            previous.next = newNode;
+            return head;
+        }
+        return newNode;
+    }
+
     public void show() {
         Node<T> current = head;
         int size = 0;

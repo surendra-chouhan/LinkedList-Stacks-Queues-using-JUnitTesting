@@ -34,4 +34,12 @@ public class LinkedListTest {
         list.insertAtLast(70);
         list.show();
     }
+
+    @Test
+    public void insert_Element_At_Middle() {
+        list.insertAtLast(56);
+        list.insertAtLast(70);
+        list.insertAtMiddle(30,1);
+        list.show();
+    }
 }
