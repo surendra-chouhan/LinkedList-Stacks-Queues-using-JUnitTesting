@@ -1,6 +1,6 @@
 package com.linkedlist;
 
-public class LinkedList<T extends Comparable> {
+public class LinkedList<T extends Comparable<T>> {
 
     class Node<T> {
         T data;
@@ -27,6 +27,20 @@ public class LinkedList<T extends Comparable> {
             tail = newNode;
         }
     }
+
+    public void insertAtFirst(T data) {
+        Node newNode1 = new Node(data);
+        if(head == null) {
+            head = newNode1;
+            tail = newNode1;
+        }
+        else {
+            Node node1 = head;
+            head = newNode1;
+            head.next = node1;
+        }
+    }
+
 
     public void show() {
         Node<T> current = head;

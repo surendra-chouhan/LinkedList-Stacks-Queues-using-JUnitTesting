@@ -18,4 +18,12 @@ public class LinkedListTest {
         list.addNode(70);
         list.show();
     }
+
+    @Test
+    public void insert_Element_At_First() {
+        list.insertAtFirst(70);
+        list.insertAtFirst(30);
+        list.insertAtFirst(56);
+        list.show();
+    }
 }
