@@ -55,4 +55,17 @@ public class LinkedListTest {
         list.popFirstElement();
         list.show();
     }
+
+    @Test
+    public void pop_Last_Element() {
+        System.out.println("Before Deleting Last Element ");
+        list.addNode(56);
+        list.addNode(30);
+        list.addNode(70);
+        list.show();
+
+        System.out.println("After Deleting Last Element ");
+        list.popLastElement();
+        list.show();
+    }
 }
