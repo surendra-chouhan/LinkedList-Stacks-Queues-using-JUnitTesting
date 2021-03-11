@@ -110,4 +110,20 @@ public class LinkedListTest {
         list.show();
         Assert.assertEquals(30,result);
     }
+
+    @Test
+    public void to_Sort_LinkedList_In_Ascending_Order() {
+        list.addNode(56);
+        list.addNode(70);
+        list.insertAtMiddle(30,1);
+        list.show();
+
+        System.out.println("Inserting Element after 30");
+        list.insertAfterGivenNode(list.head.next,40);
+        list.show();
+
+        System.out.println("After Sorting the list is : ");
+        list.sortList();
+        list.show();
+    }
 }

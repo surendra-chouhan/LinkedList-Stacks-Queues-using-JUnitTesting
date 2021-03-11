@@ -169,6 +169,30 @@ public class LinkedList<T extends Comparable<T>> {
         return (T)previous.data;
     }
 
+    public <T> void sortList() {
+        Node current = head;
+        Node index = null;
+        T temp;
+
+        if(head == null) {
+            return;
+        }
+        else {
+            while(current != null) {
+                index = current.next;
+                while(index != null) {
+                    if(((Comparable<T>) current.data).compareTo((T) index.data) > 0) {
+                        temp = (T) current.data;
+                        current.data = index.data;
+                        index.data = temp;
+                    }
+                    index = index.next;
+                }
+                current = current.next;
+            }
+        }
+    }
+
     public void show() {
         Node<T> current = head;
         int size = 0;
