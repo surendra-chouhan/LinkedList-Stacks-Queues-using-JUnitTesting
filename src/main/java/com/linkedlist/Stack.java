@@ -8,6 +8,7 @@ public class Stack<T extends Comparable> {
         this.Stack.show();
     }
 
+
     public void pop() {
         this.Stack.popFirstElement();
         this.Stack.show();
