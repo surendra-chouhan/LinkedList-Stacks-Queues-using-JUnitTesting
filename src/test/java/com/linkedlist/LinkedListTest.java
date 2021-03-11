@@ -26,4 +26,12 @@ public class LinkedListTest {
         list.insertAtFirst(56);
         list.show();
     }
+
+    @Test
+    public void insert_Element_At_Last() {
+        list.insertAtLast(56);
+        list.insertAtLast(30);
+        list.insertAtLast(70);
+        list.show();
+    }
 }

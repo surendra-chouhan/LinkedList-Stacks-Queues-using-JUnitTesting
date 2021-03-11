@@ -41,6 +41,17 @@ public class LinkedList<T extends Comparable<T>> {
         }
     }
 
+    public void insertAtLast(T data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = newNode;
+            tail = newNode;
+        }
+        else {
+            tail.next = newNode;
+            tail = newNode;
+        }
+    }
 
     public void show() {
         Node<T> current = head;
