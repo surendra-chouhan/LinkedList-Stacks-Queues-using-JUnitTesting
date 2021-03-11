@@ -73,6 +73,21 @@ public class LinkedList<T extends Comparable<T>> {
         return newNode;
     }
 
+    public void popFirstElement() {
+        if (head == null) {
+            System.out.println("List is Empty");
+            return;
+        }
+        else {
+            if (head != tail) {
+                head = head.next;
+            }
+            else {
+                head = tail = null;
+            }
+        }
+    }
+
     public void show() {
         Node<T> current = head;
         int size = 0;

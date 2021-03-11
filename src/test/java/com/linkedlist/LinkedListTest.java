@@ -42,4 +42,17 @@ public class LinkedListTest {
         list.insertAtMiddle(30,1);
         list.show();
     }
+
+    @Test
+    public void pop_First_Element() {
+        System.out.println("Before Deleting First Element ");
+        list.addNode(56);
+        list.addNode(30);
+        list.addNode(70);
+        list.show();
+
+        System.out.println("After Deleting First Element ");
+        list.popFirstElement();
+        list.show();
+    }
 }
