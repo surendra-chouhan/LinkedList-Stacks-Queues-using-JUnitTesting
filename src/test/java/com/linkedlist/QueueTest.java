@@ -17,4 +17,18 @@ public class QueueTest {
         queue.push(30);
         queue.push(70);
     }
+
+    @Test
+    public void popQueue_delete_Element_at_First() {
+        int i = 0;
+        queue.push(56);
+        queue.push(30);
+        queue.push(70);
+
+        System.out.println("After Deleting in Queue");
+        while (i < 3){
+            queue.pop();
+            i++;
+        }
+    }
 }

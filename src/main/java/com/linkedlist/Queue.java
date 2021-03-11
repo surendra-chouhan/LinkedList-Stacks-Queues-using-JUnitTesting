@@ -7,4 +7,9 @@ public class Queue<T extends Comparable> {
         this.Queue.insertAtLast(value);
         this.Queue.show();
     }
+
+    public void pop(){
+        this.Queue.popFirstElement();
+        this.Queue.show();
+    }
 }
