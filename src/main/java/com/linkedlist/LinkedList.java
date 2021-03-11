@@ -148,6 +148,27 @@ public class LinkedList<T extends Comparable<T>> {
         return (T)newNode.data;
     }
 
+    public T deleteAfterGivenNode(T key) {
+        Node<T> temp = head;
+        Node<T> previous = null;
+
+        if(temp != head && temp.data == key) {
+            head = temp.next;
+            return null;
+        }
+
+        while(temp != null && temp.data != key) {
+            previous = temp;
+            temp = temp.next;
+        }
+
+        if(temp == null) {
+            return null;
+        }
+        previous.next = temp.next;
+        return (T)previous.data;
+    }
+
     public void show() {
         Node<T> current = head;
         int size = 0;

@@ -93,4 +93,21 @@ public class LinkedListTest {
         list.show();
         Assert.assertEquals(40, result);
     }
+
+    @Test
+    public void delete_After_Given_Node() {
+        list.addNode(56);
+        list.addNode(70);
+        list.insertAtMiddle(30,1);
+        list.show();
+
+        System.out.println("Inserting Element after 30");
+        list.insertAfterGivenNode(list.head.next,40);
+        list.show();
+
+        System.out.println("After Deleting Element 40 ");
+        int result = (int)list.deleteAfterGivenNode(40);
+        list.show();
+        Assert.assertEquals(30,result);
+    }
 }
