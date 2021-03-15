@@ -1,5 +1,32 @@
 package com.linkedlist;
 
+class Node<T> {
+    T data;
+    Node next;
+
+    public Node(T data) {
+        this.data = data;
+        this.next = null;
+    }
+
+    public T getKey() {
+        return data;
+    }
+
+    public void setKey(T data) {
+        this.data = data;
+    }
+
+    public Node getNext() {
+        return next;
+    }
+
+    public void setNext(Node next) {
+        this.next = (Node) next;
+    }
+}
+
+
 public class LinkedList<T extends Comparable<T>> {
 
     public Node getHead() {
@@ -9,33 +36,6 @@ public class LinkedList<T extends Comparable<T>> {
     public Node getTail() {
         return tail;
     }
-
-    class Node<T> {
-        T data;
-        Node next;
-
-        public Node(T data) {
-            this.data = data;
-            this.next = null;
-        }
-
-        public T getKey() {
-            return data;
-        }
-
-        public void setKey(T data) {
-            this.data = data;
-        }
-
-        public Node getNext() {
-            return next;
-        }
-
-        public void setNext(Node next) {
-            this.next = (Node) next;
-        }
-    }
-
 
     public Node head = null;
     public Node tail = null;
