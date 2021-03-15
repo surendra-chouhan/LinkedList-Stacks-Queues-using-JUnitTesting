@@ -3,13 +3,21 @@ package com.linkedlist;
 public class Queue<T extends Comparable> {
     LinkedList Queue = new LinkedList();
 
+    public Object getHead(){
+        return Queue.head.getKey();
+    }
+
+    public Object getTail(){
+        return Queue.tail.getKey();
+    }
+
     public void push(T value){
-        this.Queue.insertAtLast(value);
-        this.Queue.show();
+        Queue.insertAtLast(value);
+        Queue.show();
     }
 
     public void pop(){
-        this.Queue.popFirstElement();
-        this.Queue.show();
+        Queue.popFirstElement();
+        Queue.show();
     }
 }

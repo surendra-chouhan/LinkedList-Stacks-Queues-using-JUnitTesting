@@ -3,14 +3,21 @@ package com.linkedlist;
 public class Stack<T extends Comparable> {
     LinkedList Stack = new LinkedList();
 
-    public void push(T value){
-        this.Stack.insertAtFirst(value);
-        this.Stack.show();
+    public Object getHead(){
+        return Stack.head.getKey();
     }
 
+    public Object getTail(){
+        return Stack.tail.getKey();
+    }
+
+    public void push(T value){
+        Stack.insertAtFirst(value);
+        Stack.show();
+    }
 
     public void pop() {
-        this.Stack.popFirstElement();
-        this.Stack.show();
+        Stack.popFirstElement();
+        Stack.show();
     }
 }

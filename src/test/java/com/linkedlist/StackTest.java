@@ -1,5 +1,6 @@
 package com.linkedlist;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,6 +17,10 @@ public class StackTest {
         stack.push(70);
         stack.push(30);
         stack.push(56);
+
+        boolean result = stack.getHead().equals(56) &&
+                stack.getTail().equals(70);
+        Assert.assertTrue(result);
     }
 
     @Test
@@ -26,9 +31,10 @@ public class StackTest {
         stack.push(56);
 
         System.out.println("After Deleting in Stack");
-        while ( i < 3) {
-            stack.pop();
-            i++;
-        }
+        stack.pop();
+
+        boolean result = stack.getHead().equals(30) &&
+                stack.getTail().equals(70);
+        Assert.assertTrue(result);
     }
 }

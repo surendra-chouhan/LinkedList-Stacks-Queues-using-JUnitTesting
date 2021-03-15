@@ -1,5 +1,6 @@
 package com.linkedlist;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,6 +17,10 @@ public class QueueTest {
         queue.push(56);
         queue.push(30);
         queue.push(70);
+
+        boolean result = queue.getHead().equals(56) &&
+                queue.getTail().equals(70);
+        Assert.assertTrue(result);
     }
 
     @Test
@@ -26,9 +31,10 @@ public class QueueTest {
         queue.push(70);
 
         System.out.println("After Deleting in Queue");
-        while (i < 3){
-            queue.pop();
-            i++;
-        }
+        queue.pop();
+
+        boolean result = queue.getHead().equals(30) &&
+                queue.getTail().equals(70);
+        Assert.assertTrue(result);
     }
 }
